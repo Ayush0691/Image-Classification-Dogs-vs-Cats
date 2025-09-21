@@ -3,15 +3,15 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
-# Set your paths
+# Settting the paths
 train_dir = 'data/train'  # Path to training data, e.g., data/train/dogs, data/train/cats
 val_dir = 'data/validation'  # Path to validation data, e.g., data/validation/dogs, data/validation/cats
 
-# Image dimensions
+# Images dimension
 img_width, img_height = 150, 150
 batch_size = 32
 
-# Data augmentation for training
+# Data for training
 train_datagen = ImageDataGenerator(
     rescale=1.0/255,
     rotation_range=40,
